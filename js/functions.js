@@ -11,9 +11,6 @@ const checkPalindrom = (string) => {
   return true;
 };
 
-
-console.log(checkPalindrom('топот'));
-
 const extractNumber = (string) => {
   const str = string.toString();
   let number = '';
