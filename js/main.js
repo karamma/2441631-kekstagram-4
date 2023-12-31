@@ -10,7 +10,6 @@ const generateUrl = (function (){
   return () => {
     let index = getRandomPositiveInteger(1,25);
     if (indexes.length === 25) {
-      console.log('Too much photoes');
       return null;
     }
     while (indexes.includes(index)) {
@@ -77,6 +76,5 @@ const createPhotoDescription = () => ({
   comments: Array.from({length: 30},generateComment)
 });
 
+// eslint-disable-next-line no-unused-vars
 const photoDescriptions = Array.from({length: 25}, createPhotoDescription);
-
-
