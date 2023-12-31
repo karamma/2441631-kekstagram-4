@@ -1,19 +1,20 @@
-function checkLenght(string, maxLength) {
-  return (string.length <= maxLength) ? true : false;
-}
+// eslint-disable-next-line no-unused-vars
+const checkLenght = (string, maxLength) => string.length <= maxLength;
 
-function checkPalindrom(string) {
+// eslint-disable-next-line no-unused-vars
+const checkPalindrom = (string) => {
   const trimString = string.replaceAll(' ', '').toLowerCase();
   const length = trimString.length - 1;
-  for (let i = 0; i <= length / 2; ++i) {
+  for (let i = 0; i < length / 2; ++i) {
     if (trimString[i] !== trimString[length - i]) {
       return false;
     }
   }
   return true;
-}
+};
 
-function extractNumbe(string) {
+// eslint-disable-next-line no-unused-vars
+const extractNumber = (string) => {
   const str = string.toString();
   let number = '';
   for (let i = 0; i < str.length; ++i) {
@@ -22,4 +23,4 @@ function extractNumbe(string) {
     }
   }
   return (number !== '') ? parseInt(number, 10) : NaN;
-}
+};
