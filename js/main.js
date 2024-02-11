@@ -4,6 +4,8 @@ import { DESCRIPTIONS } from './data.js';
 
 import { getRandomArrayElem, getRandomPositiveInteger } from './util.js';
 
+import { renderPhotoes } from './rendering.js';
+
 const createPhotoDescription = () => {
   const index = generateIndex();
   return {
@@ -17,3 +19,5 @@ const createPhotoDescription = () => {
 
 // eslint-disable-next-line no-unused-vars
 const photoDescriptions = Array.from({length: 25}, createPhotoDescription);
+
+renderPhotoes(photoDescriptions);
